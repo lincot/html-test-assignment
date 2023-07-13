@@ -1,0 +1,258 @@
+body {
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  text-align: left;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-bg-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 630px;
+  width: 100%;
+  background: radial-gradient(50% 50%at 50% 50%, rgb(246 243 239 / 0%), #f6f3ef);
+  z-index: 1;
+}
+
+.header-bg {
+  overflow: visible;
+}
+
+.subtract-icon-container {
+  height: 100px;
+}
+
+.subtract-icon {
+  z-index: 2;
+}
+
+.trade-your-metatrader-container {
+  height: 230px;
+}
+
+.trade-your-metatrader {
+  font-size: 52px;
+  line-height: 110%;
+  font-weight: 450;
+  font-family: "Futura PT", sans-serif;
+  color: #1d2b3f;
+  text-align: center;
+  width: 670px;
+  z-index: 2;
+}
+
+.mt-icon {
+  vertical-align: middle;
+}
+
+.dont-wait-container {
+  margin-top: -20px;
+  margin-bottom: -45px;
+}
+
+.qr-icon1 {
+  margin-right: 30px;
+  z-index: 3;
+}
+
+.dont-wait {
+  font-size: 14px;
+  color: #1d2b3f;
+  line-height: 150%;
+  font-weight: 500;
+  width: 170px;
+  z-index: 2;
+}
+
+.phone1-segment {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.look-container {
+  margin-right: 60px;
+}
+
+.ellipse {
+  position: absolute;
+  z-index: 2;
+}
+
+.look-text {
+  z-index: 3;
+  width: 270px;
+}
+
+.looking-for {
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.look-no-further {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.phone1-left {
+  margin-right: -200px;
+  border-radius: 15px;
+  width: 285px;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.phone1 {
+  width: 365px;
+  z-index: 3;
+}
+
+.phone1-right {
+  margin-left: -200px;
+  border-radius: 15px;
+  width: 285px;
+  z-index: 3;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.with-the-mt4-container {
+  margin-top: 150px;
+  margin-left: 80px;
+}
+
+.ellipse-line1 {
+  margin-left: -370px;
+  margin-top: -210px;
+}
+
+.with-the-mt4 {
+  font-size: 18px;
+  line-height: 150%;
+  color: #2d3436;
+  width: 270px;
+  z-index: 3;
+  margin-bottom: 30px;
+}
+
+.download-icon {
+  width: 160px;
+  z-index: 3;
+}
+
+.apple-icon2 {
+  margin-bottom: 10px;
+}
+
+.download-mt4-contaner {
+  align-items: center;
+}
+
+.download-mt4-for-container {
+  line-height: 150%;
+  font-weight: 600;
+  width: 570px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.apple-icon3 {
+  margin-right: 30px;
+}
+
+.phone2-segment {
+  width: 100%;
+  margin-top: 140px;
+}
+
+.with-the-app-container {
+  margin-right: 70px;
+}
+
+.ellipse-line2 {
+  margin-top: -30px;
+  margin-left: -40px;
+}
+
+.with-the-app {
+  line-height: 150%;
+  font-weight: 600;
+  color: #2d3436;
+  width: 470px;
+  margin-bottom: 40px;
+  z-index: 3;
+}
+
+.download-the-award-winning {
+  line-height: 150%;
+  font-weight: 500;
+  width: 195px;
+  font-size: 14px;
+  color: #1d2b3f;
+  margin-left: 30px;
+  z-index: 3;
+}
+
+.qr-icon2 {
+  z-index: 3;
+}
+
+.phone2-left {
+  border-radius: 15px;
+  width: 320px;
+  margin-right: -21%;
+  z-index: 3;
+  margin-top: -150px;
+}
+
+.phone2-right {
+  border-radius: 15px;
+  width: 320px;
+  z-index: 3;
+  margin-left: -80px;
+}
+
+.help-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  height: 120px;
+}
+
+.need-help-container {
+  width: 65%;
+  height: 60px;
+  background-color: #f8f2ec;
+  border-radius: 9px;
+}
+
+.need-help {
+  font-weight: 300;
+  z-index: 3;
+}
+
+.help-section {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #b68756;
+}
