@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Inter, sans-serif;
   font-size: 22px;
@@ -31,11 +35,6 @@ body {
 
 .underline {
   text-decoration: underline;
-}
-
-.horizontal {
-  display: flex;
-  align-items: center;
 }
 
 .hide-on-desktop {
@@ -257,8 +256,102 @@ main {
   }
 }
 
+.swiper-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 420px;
+  margin-top: 180px;
+
+  @media (min-width: 1024px) {
+    margin-top: 50px;
+  }
+}
+
+.swiper {
+  position: absolute;
+  padding-top: 60px;
+}
+
+.swiper-wrapper {
+  width: 500px;
+
+  @media (min-width: 1024px) {
+    width: 2370px;
+  }
+}
+
+.swiper-pagination-bullet {
+  opacity: 100%;
+  background-color: #ebe5de;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b68756;
+  width: 22px;
+  border-radius: 4px;
+}
+
+.swiper-pagination {
+  bottom: 95% !important;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  background: #f6f3ef;
+  width: 300px;
+  height: 640px;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 0 auto;
+  justify-content: space-between;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    width: 770px;
+    height: 370px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 234px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    align-self: center;
+    margin-top: 60px;
+
+    @media (min-width: 1024px) {
+      width: 270px;
+      margin-top: 30px;
+    }
+  }
+
+  &__header {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__phone {
+    width: 300px;
+
+    @media (min-width: 1024px) {
+      margin-top: 50px;
+      margin-left: 30px;
+    }
+  }
+}
+
 .download-mt4 {
   align-items: center;
+  margin-top: 180px;
+
+  @media (min-width: 1024px) {
+    margin-top: 80px;
+  }
 
   &__text {
     line-height: 150%;
@@ -421,7 +514,7 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
-  top: 50px;
+  top: 70px;
   height: 100px;
 
   @media (min-width: 1024px) {
