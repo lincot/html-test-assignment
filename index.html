@@ -11,8 +11,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;700&display=swap" />
   <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2"
+    as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2" as="font"
     type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/futura-pt" />
@@ -26,15 +33,26 @@
       <img src="images/subtract.svg" />
     </div>
 
-    <div class="trade-your-metatrader center-box">
+    <div class="trade-your-metatrader">
+      <img class="trade-your-metatrader__mt-icon hide-on-desktop" src="images/mt.svg" />
       <h1 class="trade-your-metatrader__text">
-        Trade Your <img class="trade-your-metatrader__mt-icon" src="images/mt.svg" />
+        Trade Your <img class="trade-your-metatrader__mt-icon hide-on-mobile" src="images/mt.svg" />
         MetaTrader Accounts in One App!
       </h1>
     </div>
 
-    <div class="dont-wait center-box">
-      <img class="dont-wait__qr-icon" src="images/qr.svg" />
+    <div class="dont-wait">
+      <img class="dont-wait__qr-icon hide-on-mobile" src="images/qr.svg" />
+
+      <div class="vertical hide-on-desktop">
+        <a href="https://example.com" class="download-icon dont-wait__apple-icon">
+          <img src="images/apple.svg" />
+        </a>
+        <a href="https://example.com" class="download-icon">
+          <img src="images/android.svg" />
+        </a>
+      </div>
+
       <p class="dont-wait__text">
         Don't wait - download the App with MT4/MT5 included now!
       </p>
@@ -42,7 +60,7 @@
   </header>
 
   <main>
-    <div class="center-box">
+    <div class="phone1-section">
       <div class="look center-box">
         <img class="centered" src="images/yellow-ellipse.svg" />
         <div class="look__text">
@@ -88,7 +106,7 @@
         <span class="underline">Futures</span> & more!
       </p>
 
-      <div class="horizontal">
+      <div class="download-mt4__icons">
         <a href="https://example.com" class="download-mt4__apple-icon download-icon">
           <img src="images/apple.svg" />
         </a>
@@ -98,7 +116,7 @@
       </div>
     </div>
 
-    <div class="section2 center-box">
+    <div class="phone2-section center-box">
       <div class="with-the-app vertical">
         <img class="centered with-the-app__ellipse" src="images/ellipse.svg" />
         <p class="with-the-app__with-the-app">
@@ -107,8 +125,18 @@
           the features and functionality you need to trade like a pro!
         </p>
 
-        <div class="horizontal">
-          <img src="images/qr.svg" />
+        <div class="with-the-app__download-box">
+          <img class="hide-on-mobile" src="images/qr.svg" />
+
+          <div class="vertical hide-on-desktop">
+            <a href="https://example.com" class="download-icon with-the-app__apple-icon">
+              <img src="images/apple.svg" />
+            </a>
+            <a href="https://example.com" class="download-icon">
+              <img src="images/android.svg" />
+            </a>
+          </div>
+
           <p class="with-the-app__download">
             Download the award-winning App with MT4/MT5 included.
           </p>

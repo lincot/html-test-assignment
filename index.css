@@ -38,10 +38,27 @@ body {
   align-items: center;
 }
 
+@media (min-width: 1024px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
 header {
   position: relative;
-  background: url("images/header-bg.svg") no-repeat center, radial-gradient(50% 50% at 50% 50%, rgba(246, 243, 239, 0), #f6f3ef);
+  background: url("images/header-bg-mobile.svg") no-repeat center bottom 40px, radial-gradient(50% 50% at 50% 50%, rgba(246, 243, 239, 0), #f6f3ef);
   height: 630px;
+}
+@media (min-width: 1024px) {
+  header {
+    background: url("images/header-bg.svg") no-repeat center, radial-gradient(50% 50% at 50% 50%, rgba(246, 243, 239, 0), #f6f3ef);
+  }
 }
 
 .logo-box {
@@ -49,25 +66,49 @@ header {
 }
 
 .trade-your-metatrader {
-  height: 200px;
-  align-items: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .trade-your-metatrader {
+    height: 200px;
+  }
 }
 .trade-your-metatrader__text {
-  font-size: 52px;
+  font-size: 36px;
   line-height: 110%;
   font-weight: 450;
   font-family: "Futura PT", sans-serif;
   color: #1d2b3f;
   text-align: center;
-  width: 670px;
+  width: 300px;
   margin: 0;
+  margin-top: 20px;
+}
+@media (min-width: 1024px) {
+  .trade-your-metatrader__text {
+    font-size: 52px;
+    width: 670px;
+  }
 }
 .trade-your-metatrader__mt-icon {
   vertical-align: middle;
 }
 
 .dont-wait {
-  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+@media (min-width: 1024px) {
+  .dont-wait {
+    flex-direction: row;
+    margin-top: 10px;
+  }
 }
 .dont-wait__qr-icon {
   margin-right: 30px;
@@ -77,17 +118,50 @@ header {
   color: #1d2b3f;
   line-height: 150%;
   font-weight: 500;
-  width: 170px;
+  width: 300px;
+  text-align: center;
+  margin-top: 30px;
+}
+@media (min-width: 1024px) {
+  .dont-wait__text {
+    text-align: left;
+    width: 170px;
+    margin-top: 15px;
+  }
+}
+.dont-wait__apple-icon {
+  margin-bottom: 10px;
 }
 
 main {
   position: relative;
-  top: -180px;
+  top: 50px;
+}
+@media (min-width: 1024px) {
+  main {
+    top: -180px;
+  }
+}
+
+.phone1-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .phone1-section {
+    flex-direction: row;
+  }
 }
 
 .look {
-  margin-right: 140px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .look {
+    margin-right: 140px;
+  }
 }
 .look__text {
   z-index: 2;
@@ -109,28 +183,53 @@ main {
 }
 .phone1__left {
   position: absolute;
-  top: 72px;
-  left: -82px;
-  width: 285px;
+  top: 60px;
+  left: -52px;
+  width: 180px;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .phone1__left {
+    top: 72px;
+    left: -82px;
+    width: 285px;
+  }
 }
 .phone1__center {
   position: relative;
-  width: 365px;
+  width: 230px;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .phone1__center {
+    width: 365px;
+  }
 }
 .phone1__right {
   position: absolute;
-  top: 72px;
-  left: 163px;
-  width: 285px;
+  top: 60px;
+  left: 105px;
+  width: 180px;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .phone1__right {
+    top: 72px;
+    left: 163px;
+    width: 285px;
+  }
 }
 
 .with-the-mt4 {
   position: relative;
-  margin-top: 140px;
-  margin-left: 140px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .with-the-mt4 {
+    margin-top: 140px;
+    margin-left: 140px;
+    align-items: unset;
+  }
 }
 .with-the-mt4__ellipse {
   top: 35%;
@@ -140,9 +239,16 @@ main {
   font-size: 18px;
   line-height: 150%;
   color: #2d3436;
-  width: 270px;
+  width: 300px;
   z-index: 2;
   margin-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .with-the-mt4__text {
+    text-align: left;
+    width: 270px;
+  }
 }
 .with-the-mt4__apple-icon {
   margin-bottom: 10px;
@@ -154,89 +260,205 @@ main {
 .download-mt4__text {
   line-height: 150%;
   font-weight: 600;
-  width: 570px;
+  width: 300px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 40px;
 }
+@media (min-width: 1024px) {
+  .download-mt4__text {
+    width: 570px;
+  }
+}
+.download-mt4__icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .download-mt4__icons {
+    flex-direction: row;
+  }
+}
 .download-mt4__apple-icon {
-  margin-right: 30px;
+  margin-bottom: 10px;
+}
+@media (min-width: 1024px) {
+  .download-mt4__apple-icon {
+    margin-bottom: unset;
+    margin-right: 30px;
+  }
 }
 
-.section2 {
-  margin-top: 70px;
+.phone2-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 30px;
+}
+@media (min-width: 1024px) {
+  .phone2-section {
+    flex-direction: row;
+    margin-top: 70px;
+  }
 }
 
 .with-the-app {
-  margin-top: 170px;
-  margin-right: 150px;
   position: relative;
-  left: -120px;
+  margin-top: 80px;
+}
+@media (min-width: 1024px) {
+  .with-the-app {
+    margin-top: 170px;
+    margin-right: 150px;
+    left: -120px;
+  }
 }
 .with-the-app__ellipse {
-  top: 90%;
-  left: 64%;
+  width: 440px;
+  top: 35%;
+}
+@media (min-width: 1024px) {
+  .with-the-app__ellipse {
+    top: 90%;
+    left: 64%;
+    width: unset;
+  }
 }
 .with-the-app__with-the-app {
   line-height: 150%;
   font-weight: 600;
   color: #2d3436;
-  width: 470px;
+  width: 300px;
   margin-bottom: 40px;
   z-index: 2;
+}
+@media (min-width: 1024px) {
+  .with-the-app__with-the-app {
+    width: 470px;
+  }
+}
+.with-the-app__download-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .with-the-app__download-box {
+    flex-direction: row;
+  }
 }
 .with-the-app__download {
   line-height: 150%;
   font-weight: 500;
-  width: 195px;
+  width: 300px;
   font-size: 14px;
   color: #1d2b3f;
-  margin-left: 30px;
   z-index: 2;
+  text-align: center;
+  margin-top: 25px;
+}
+@media (min-width: 1024px) {
+  .with-the-app__download {
+    text-align: left;
+    width: 195px;
+    margin-top: unset;
+    margin-left: 30px;
+  }
+}
+.with-the-app__apple-icon {
+  margin-bottom: 10px;
 }
 
 .phone2 {
   position: relative;
-  left: -140px;
+}
+@media (min-width: 1024px) {
+  .phone2 {
+    left: -140px;
+  }
 }
 .phone2__ellipse {
-  left: 70%;
+  width: 400px;
   top: 60%;
+}
+@media (min-width: 1024px) {
+  .phone2__ellipse {
+    left: 70%;
+    width: unset;
+  }
 }
 .phone2__left {
   position: relative;
-  width: 320px;
+  width: 200px;
   z-index: 2;
+  left: -40px;
+}
+@media (min-width: 1024px) {
+  .phone2__left {
+    width: 320px;
+    left: unset;
+  }
 }
 .phone2__right {
   position: absolute;
-  width: 320px;
+  width: 200px;
   z-index: 2;
-  left: 125px;
-  top: 80px;
+  top: 50px;
+  left: 40px;
+}
+@media (min-width: 1024px) {
+  .phone2__right {
+    width: 320px;
+    top: 80px;
+    left: 125px;
+  }
 }
 
 footer {
   position: relative;
   display: flex;
   justify-content: center;
-  top: -20px;
+  top: 50px;
+  height: 100px;
+}
+@media (min-width: 1024px) {
+  footer {
+    top: -20px;
+  }
 }
 
 .need-help {
-  width: 65%;
+  width: 95%;
   height: 60px;
-  background-color: #f8f2ec;
+  background: #f8f2ec;
   border-radius: 9px;
   z-index: -1;
+}
+@media (min-width: 1024px) {
+  .need-help {
+    width: 65%;
+  }
 }
 .need-help__text {
   font-weight: 300;
   z-index: 2;
+  width: 150px;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  line-height: 112%;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .need-help__text {
+    font-size: 22px;
+    width: unset;
+    font-family: unset;
+  }
 }
 .need-help__help-section-link {
   font-weight: bold;
-  text-decoration: underline;
   color: #b68756;
 }
 

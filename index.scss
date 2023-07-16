@@ -38,11 +38,28 @@ body {
   align-items: center;
 }
 
+.hide-on-desktop {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
 header {
+  $gradient: radial-gradient(50% 50%at 50% 50%, rgb(246 243 239 / 0%), #f6f3ef);
+
   position: relative;
-  background: url("images/header-bg.svg") no-repeat center,
-    radial-gradient(50% 50%at 50% 50%, rgb(246 243 239 / 0%), #f6f3ef);
+  background: url("images/header-bg-mobile.svg") no-repeat center bottom 40px, $gradient;
   height: 630px;
+
+  @media (min-width: 1024px) {
+    background: url("images/header-bg.svg") no-repeat center, $gradient;
+  }
 }
 
 .logo-box {
@@ -50,18 +67,30 @@ header {
 }
 
 .trade-your-metatrader {
-  height: 200px;
-  align-items: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 1024px) {
+    height: 200px;
+  }
 
   &__text {
-    font-size: 52px;
+    font-size: 36px;
     line-height: 110%;
     font-weight: 450;
     font-family: "Futura PT", sans-serif;
     color: #1d2b3f;
     text-align: center;
-    width: 670px;
+    width: 300px;
     margin: 0;
+    margin-top: 20px;
+
+    @media (min-width: 1024px) {
+      font-size: 52px;
+      width: 670px;
+    }
   }
 
   &__mt-icon {
@@ -70,7 +99,16 @@ header {
 }
 
 .dont-wait {
-  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin-top: 10px;
+  }
 
   &__qr-icon {
     margin-right: 30px;
@@ -81,18 +119,48 @@ header {
     color: #1d2b3f;
     line-height: 150%;
     font-weight: 500;
-    width: 170px;
+    width: 300px;
+    text-align: center;
+    margin-top: 30px;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      width: 170px;
+      margin-top: 15px;
+    }
+  }
+
+  &__apple-icon {
+    margin-bottom: 10px;
   }
 }
 
 main {
   position: relative;
-  top: -180px;
+  top: 50px;
+
+  @media (min-width: 1024px) {
+    top: -180px;
+  }
+}
+
+.phone1-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .look {
-  margin-right: 140px;
   position: relative;
+
+  @media (min-width: 1024px) {
+    margin-right: 140px;
+  }
 
   &__text {
     z-index: 2;
@@ -117,31 +185,52 @@ main {
 
   &__left {
     position: absolute;
-    top: 72px;
-    left: -82px;
-    width: 285px;
+    top: 60px;
+    left: -52px;
+    width: 180px;
     z-index: 2;
+
+    @media (min-width: 1024px) {
+      top: 72px;
+      left: -82px;
+      width: 285px;
+    }
   }
 
   &__center {
     position: relative;
-    width: 365px;
+    width: 230px;
     z-index: 2;
+
+    @media (min-width: 1024px) {
+      width: 365px;
+    }
   }
 
   &__right {
     position: absolute;
-    top: 72px;
-    left: 163px;
-    width: 285px;
+    top: 60px;
+    left: 105px;
+    width: 180px;
     z-index: 2;
+
+    @media (min-width: 1024px) {
+      top: 72px;
+      left: 163px;
+      width: 285px;
+    }
   }
 }
 
 .with-the-mt4 {
   position: relative;
-  margin-top: 140px;
-  margin-left: 140px;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    margin-top: 140px;
+    margin-left: 140px;
+    align-items: unset;
+  }
 
   &__ellipse {
     top: 35%;
@@ -152,9 +241,15 @@ main {
     font-size: 18px;
     line-height: 150%;
     color: #2d3436;
-    width: 270px;
+    width: 300px;
     z-index: 2;
     margin-bottom: 30px;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      width: 270px;
+    }
   }
 
   &__apple-icon {
@@ -168,73 +263,157 @@ main {
   &__text {
     line-height: 150%;
     font-weight: 600;
-    width: 570px;
+    width: 300px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 40px;
+
+    @media (min-width: 1024px) {
+      width: 570px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__apple-icon {
-    margin-right: 30px;
+    margin-bottom: 10px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: unset;
+      margin-right: 30px;
+    }
   }
 }
 
-.section2 {
-  margin-top: 70px;
+.phone2-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 30px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin-top: 70px;
+  }
 }
 
 .with-the-app {
-  margin-top: 170px;
-  margin-right: 150px;
   position: relative;
-  left: -120px;
+  margin-top: 80px;
+
+  @media (min-width: 1024px) {
+    margin-top: 170px;
+    margin-right: 150px;
+    left: -120px;
+  }
 
   &__ellipse {
-    top: 90%;
-    left: 64%;
+    width: 440px;
+    top: 35%;
+
+    @media (min-width: 1024px) {
+      top: 90%;
+      left: 64%;
+      width: unset;
+    }
   }
 
   &__with-the-app {
     line-height: 150%;
     font-weight: 600;
     color: #2d3436;
-    width: 470px;
+    width: 300px;
     margin-bottom: 40px;
     z-index: 2;
+
+    @media (min-width: 1024px) {
+      width: 470px;
+    }
+  }
+
+  &__download-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__download {
     line-height: 150%;
     font-weight: 500;
-    width: 195px;
+    width: 300px;
     font-size: 14px;
     color: #1d2b3f;
-    margin-left: 30px;
     z-index: 2;
+    text-align: center;
+    margin-top: 25px;
+
+    @media (min-width: 1024px) {
+      text-align: left;
+      width: 195px;
+      margin-top: unset;
+      margin-left: 30px;
+    }
+  }
+
+  &__apple-icon {
+    margin-bottom: 10px;
   }
 }
 
 .phone2 {
   position: relative;
-  left: -140px;
+
+  @media (min-width: 1024px) {
+    left: -140px;
+  }
 
   &__ellipse {
-    left: 70%;
+    width: 400px;
     top: 60%;
+
+    @media (min-width: 1024px) {
+      left: 70%;
+      width: unset;
+    }
   }
 
   &__left {
     position: relative;
-    width: 320px;
+    width: 200px;
     z-index: 2;
+    left: -40px;
+
+    @media (min-width: 1024px) {
+      width: 320px;
+      left: unset;
+    }
   }
 
   &__right {
     position: absolute;
-    width: 320px;
+    width: 200px;
     z-index: 2;
-    left: 125px;
-    top: 80px;
+    top: 50px;
+    left: 40px;
+
+    @media (min-width: 1024px) {
+      width: 320px;
+      top: 80px;
+      left: 125px;
+    }
   }
 }
 
@@ -242,24 +421,43 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
-  top: -20px;
+  top: 50px;
+  height: 100px;
+
+  @media (min-width: 1024px) {
+    top: -20px;
+  }
 }
 
 .need-help {
-  width: 65%;
+  width: 95%;
   height: 60px;
-  background-color: #f8f2ec;
+  background: #f8f2ec;
   border-radius: 9px;
   z-index: -1;
+
+  @media (min-width: 1024px) {
+    width: 65%;
+  }
 
   &__text {
     font-weight: 300;
     z-index: 2;
+    width: 150px;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    line-height: 112%;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      font-size: 22px;
+      width: unset;
+      font-family: unset;
+    }
   }
 
   &__help-section-link {
     font-weight: bold;
-    text-decoration: underline;
     color: #b68756;
   }
 }
