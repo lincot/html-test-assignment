@@ -7,7 +7,7 @@ body {
   font-size: 22px;
   text-align: left;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .center-box {
@@ -515,7 +515,7 @@ footer {
   display: flex;
   justify-content: center;
   top: 70px;
-  height: 100px;
+  height: 160px;
 
   @media (min-width: 1024px) {
     top: -20px;
