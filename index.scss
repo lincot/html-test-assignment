@@ -335,13 +335,39 @@ main {
     margin: 0;
   }
 
-  &__phone {
-    width: 300px;
+  &__phone-box {
+    position: relative;
+    display: inline-flex;
+    width: max-content;
+    margin: 0 auto;
 
     @media (min-width: 1024px) {
-      margin-top: 50px;
-      margin-left: 30px;
+      margin: 50px 0 0 60px;
     }
+  }
+
+  &__phone {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__phone-shade-left,
+  &__phone-shade-right {
+    position: absolute;
+    width: 240px;
+    height: 495px;
+    border-radius: 15px;
+    background: #ebe5de;
+  }
+
+  &__phone-shade-left {
+    left: -30px;
+    top: 60px;
+  }
+
+  &__phone-shade-right {
+    right: -30px;
+    top: 30px;
   }
 }
 
